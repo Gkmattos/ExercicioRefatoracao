@@ -1,3 +1,9 @@
+package tests;
+
+import business.*;
+import persistence.Cliente;
+import persistence.Socio;
+
 import static org.junit.Assert.*;
 
 import org.junit.Before;
@@ -46,8 +52,8 @@ public class BarTest {
 
 	@Test
 	public void testaBuscaCliente() {
-		b.getClientePorCPF("01531075029");
-		assertEquals(b.getClientePorCPF("01531075029"), b.getClientePorCPF("01531075029"));
+		Cliente cb = b.getClientePorCPF("01531075029");
+		assertEquals(cb, b.getClientePorCPF("01531075029"));
 	}
 
 	@Test
@@ -146,6 +152,7 @@ public class BarTest {
 		b.entrada(c8);
 		assertEquals(13, b.percentSocios());
 	}
+
 	@Test
 	public void testaPercentualDeNaoSocios() {
 		Cliente c5 = new Socio("Ial Jonas", "01531075029", 20, "F", 232);

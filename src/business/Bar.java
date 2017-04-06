@@ -1,4 +1,8 @@
+package business;
+
 import java.util.ArrayList;
+
+import persistence.*;
 
 public class Bar {
 	private ArrayList<Cliente> clientes;

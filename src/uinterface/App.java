@@ -1,3 +1,7 @@
+package uinterface;
+import business.Bar;
+import persistence.Cliente;
+import persistence.Socio;
 
 public class App {
 

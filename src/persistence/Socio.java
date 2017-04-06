@@ -1,3 +1,4 @@
+package persistence;
 public class Socio extends Cliente {
 
 	private int codSocio;
