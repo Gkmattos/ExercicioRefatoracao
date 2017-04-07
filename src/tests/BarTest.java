@@ -46,7 +46,6 @@ public class BarTest {
 
 	@Test
 	public void testaSaidaClienteInvalido() {
-		// b.saidaCliente("123");
 		assertEquals(false, b.saidaCliente("123"));
 	}
 
@@ -58,7 +57,6 @@ public class BarTest {
 
 	@Test
 	public void testaBuscaClienteInválido() {
-		// b.getClientePorCPF("01531075029");
 		assertEquals(null, b.getClientePorCPF("54"));
 	}
 
@@ -165,4 +163,11 @@ public class BarTest {
 		b.entrada(c8);
 		assertEquals(88, b.percentNaoSocios());
 	}
+	
+	@Test
+	public void testaToString(){
+		String msg=b.toString();
+		assertEquals(msg, b.toString());
+	}
+	
 }

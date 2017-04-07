@@ -38,6 +38,11 @@ public class App {
 		System.out.println(b.percentMulheres());
 		System.out.println(b.percentNaoSocios());
 		System.out.println(b.percentSocios());
+		
+		System.out.println("***************************************");
+		
+		System.out.println(b.toString());
+		
 
 	}
 }
