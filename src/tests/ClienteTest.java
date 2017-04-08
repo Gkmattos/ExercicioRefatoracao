@@ -18,9 +18,42 @@ public class ClienteTest {
 	}
 
 	@Test
-	public void testaSaidaCliente() {
+	public void testagetNome() {
 		String nome = cl.getNome();
 		assertEquals(nome, cl.getNome());
+	}
+
+	@Test
+	public void testaSetNome() {
+		cl.setNome("Jonas");
+		String nome = cl.getNome();
+		assertEquals(nome, cl.getNome());
+	}
+
+	@Test
+	public void testaGetCPF() {
+		String cpf = cl.getCpf();
+		assertEquals(cpf, cl.getCpf());
+	}
+
+	@Test
+	public void testaSetCPF() {
+		cl.setCpf("12345");
+		String cpf = cl.getCpf();
+		assertEquals(cpf, cl.getCpf());
+	}
+
+	@Test
+	public void testaGetIdade() {
+		int idade = cl.getIdade();
+		assertEquals(idade, cl.getIdade());
+	}
+
+	@Test
+	public void testaSetIdade() {
+		cl.setIdade(35);
+		int idade = cl.getIdade();
+		assertEquals(idade, cl.getIdade());
 	}
 
 }
