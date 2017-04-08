@@ -56,4 +56,23 @@ public class ClienteTest {
 		assertEquals(idade, cl.getIdade());
 	}
 
+	@Test
+	public void testaGetGenero() {
+		String genero = cl.getGenero();
+		assertEquals(genero, cl.getGenero());
+	}
+
+	@Test
+	public void testaSetGenero() {
+		cl.setGenero("F");
+		String genero = cl.getGenero();
+		assertEquals(genero, cl.getGenero());
+	}
+
+	@Test
+	public void testaToString() {
+		String msg = cl.toString();
+		assertEquals(msg, cl.toString());
+	}
+
 }
