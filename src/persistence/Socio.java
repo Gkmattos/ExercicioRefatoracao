@@ -11,6 +11,10 @@ public class Socio extends Cliente {
 	public int getCodSocio() {
 		return codSocio;
 	}
+	
+	public void setCodSocio(int codSocio){
+		this.codSocio=codSocio;
+	}
 
 	@Override
 	public String toString() {

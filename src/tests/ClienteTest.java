@@ -1,6 +1,5 @@
 package tests;
 
-import business.*;
 import persistence.Cliente;
 
 import static org.junit.Assert.*;
@@ -18,7 +17,7 @@ public class ClienteTest {
 	}
 
 	@Test
-	public void testagetNome() {
+	public void testaGetNome() {
 		String nome = cl.getNome();
 		assertEquals(nome, cl.getNome());
 	}
