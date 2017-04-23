@@ -14,7 +14,7 @@ import javax.swing.JButton;
 public class JUISaidaCliente extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
+	private JTextField cpf;
 
 	/**
 	 * Launch the application.
@@ -37,7 +37,7 @@ public class JUISaidaCliente extends JFrame {
 	 */
 	public JUISaidaCliente() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 333, 202);
+		setBounds(100, 100, 333, 179);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -48,14 +48,18 @@ public class JUISaidaCliente extends JFrame {
 		lblInformeOCpf.setBounds(37, 33, 277, 20);
 		contentPane.add(lblInformeOCpf);
 		
-		textField = new JTextField();
-		textField.setBounds(37, 73, 237, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		cpf = new JTextField();
+		cpf.setBounds(37, 73, 237, 20);
+		contentPane.add(cpf);
+		cpf.setColumns(10);
 		
-		JButton btnSair = new JButton("Sair");
-		btnSair.setBounds(113, 119, 89, 23);
+		JButton btnSair = new JButton("Liberar");
+		btnSair.setBounds(63, 104, 89, 23);
 		contentPane.add(btnSair);
+		
+		JButton btnSair_1 = new JButton("Sair");
+		btnSair_1.setBounds(164, 104, 89, 23);
+		contentPane.add(btnSair_1);
 	}
 
 }

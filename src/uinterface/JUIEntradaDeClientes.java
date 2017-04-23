@@ -18,10 +18,10 @@ import java.awt.Font;
 public class JUIEntradaDeClientes extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
+	private JTextField nome;
+	private JTextField cpf;
+	private JTextField idade;
+	private JTextField sexo;
 	private JButton btnNewButton;
 
 	/**
@@ -56,7 +56,7 @@ public class JUIEntradaDeClientes extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnTeste.setBounds(142, 163, 89, 23);
+		btnTeste.setBounds(106, 154, 89, 23);
 		contentPane.add(btnTeste);
 
 		JLabel lblNome = new JLabel("Nome:");
@@ -79,34 +79,34 @@ public class JUIEntradaDeClientes extends JFrame {
 		lblSexo.setBounds(27, 124, 46, 14);
 		contentPane.add(lblSexo);
 
-		textField = new JTextField();
-		textField.setBounds(82, 13, 233, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		nome = new JTextField();
+		nome.setBounds(82, 13, 233, 20);
+		contentPane.add(nome);
+		nome.setColumns(10);
 
-		textField_1 = new JTextField();
-		textField_1.setBounds(83, 49, 232, 20);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		cpf = new JTextField();
+		cpf.setBounds(83, 49, 232, 20);
+		contentPane.add(cpf);
+		cpf.setColumns(10);
 
-		textField_2 = new JTextField();
-		textField_2.setBounds(83, 87, 232, 20);
-		contentPane.add(textField_2);
-		textField_2.setColumns(10);
+		idade = new JTextField();
+		idade.setBounds(83, 87, 232, 20);
+		contentPane.add(idade);
+		idade.setColumns(10);
 
-		textField_3 = new JTextField();
-		textField_3.setBounds(83, 123, 232, 20);
-		contentPane.add(textField_3);
-		textField_3.setColumns(10);
+		sexo = new JTextField();
+		sexo.setBounds(83, 123, 232, 20);
+		contentPane.add(sexo);
+		sexo.setColumns(10);
 
-		btnNewButton = new JButton("New button");
+		btnNewButton = new JButton("Sair");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 			}
 		});
-		btnNewButton.setBounds(241, 163, 89, 23);
+		btnNewButton.setBounds(205, 154, 89, 23);
 		contentPane.add(btnNewButton);
 	}
 
