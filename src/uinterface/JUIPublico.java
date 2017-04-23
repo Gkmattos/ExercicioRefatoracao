@@ -10,6 +10,8 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class JUIPublico extends JFrame {
 
@@ -42,7 +44,7 @@ public class JUIPublico extends JFrame {
 	 * Create the frame.
 	 */
 	public JUIPublico() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 290, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -110,6 +112,11 @@ public class JUIPublico extends JFrame {
 		textField_5.setColumns(10);
 		
 		btnFechar = new JButton("Fechar");
+		btnFechar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
 		btnFechar.setBounds(166, 223, 89, 23);
 		contentPane.add(btnFechar);
 	}

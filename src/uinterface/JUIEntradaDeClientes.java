@@ -6,6 +6,10 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import business.Bar;
+import persistence.Cliente;
+
 import javax.swing.JTextPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
@@ -22,7 +26,7 @@ public class JUIEntradaDeClientes extends JFrame {
 	private JTextField cpf;
 	private JTextField idade;
 	private JTextField sexo;
-	private JButton btnNewButton;
+	private Bar bar;
 
 	/**
 	 * Launch the application.
@@ -33,6 +37,7 @@ public class JUIEntradaDeClientes extends JFrame {
 				try {
 					JUIEntradaDeClientes frame = new JUIEntradaDeClientes();
 					frame.setVisible(true);
+
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -44,7 +49,8 @@ public class JUIEntradaDeClientes extends JFrame {
 	 * Create the frame.
 	 */
 	public JUIEntradaDeClientes() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		bar = new Bar();
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 373, 248);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -54,9 +60,12 @@ public class JUIEntradaDeClientes extends JFrame {
 		JButton btnTeste = new JButton("Entrar");
 		btnTeste.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Cliente cl = new Cliente(nome.getText(), cpf.getText(), Integer.parseInt(idade.getText()),
+						sexo.getText());
+				bar.entrada(cl);
 			}
 		});
-		btnTeste.setBounds(106, 154, 89, 23);
+		btnTeste.setBounds(156, 154, 89, 23);
 		contentPane.add(btnTeste);
 
 		JLabel lblNome = new JLabel("Nome:");
@@ -98,16 +107,6 @@ public class JUIEntradaDeClientes extends JFrame {
 		sexo.setBounds(83, 123, 232, 20);
 		contentPane.add(sexo);
 		sexo.setColumns(10);
-
-		btnNewButton = new JButton("Sair");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-			}
-		});
-		btnNewButton.setBounds(205, 154, 89, 23);
-		contentPane.add(btnNewButton);
 	}
 
 }

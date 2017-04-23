@@ -36,7 +36,7 @@ public class JUISaidaCliente extends JFrame {
 	 * Create the frame.
 	 */
 	public JUISaidaCliente() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 333, 179);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -54,12 +54,8 @@ public class JUISaidaCliente extends JFrame {
 		cpf.setColumns(10);
 		
 		JButton btnSair = new JButton("Liberar");
-		btnSair.setBounds(63, 104, 89, 23);
+		btnSair.setBounds(112, 104, 89, 23);
 		contentPane.add(btnSair);
-		
-		JButton btnSair_1 = new JButton("Sair");
-		btnSair_1.setBounds(164, 104, 89, 23);
-		contentPane.add(btnSair_1);
 	}
 
 }

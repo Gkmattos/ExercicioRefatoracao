@@ -13,6 +13,10 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+import business.Bar;
+import persistence.Cliente;
+import persistence.Socio;
+
 public class JUIEntradaSocios extends JFrame {
 
 	private JPanel contentPane;
@@ -32,6 +36,7 @@ public class JUIEntradaSocios extends JFrame {
 				try {
 					JUIEntradaSocios frame = new JUIEntradaSocios();
 					frame.setVisible(true);
+
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -43,19 +48,22 @@ public class JUIEntradaSocios extends JFrame {
 	 * Create the frame.
 	 */
 	public JUIEntradaSocios() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 373, 274);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-
+		Bar bar = new Bar();
 		JButton btnTeste = new JButton("Entrar");
 		btnTeste.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Cliente soc = new Socio(nome.getText(), cpf.getText(), Integer.parseInt(idade.getText()),
+						sexo.getText(),Integer.parseInt(codigo.getText()));
+				bar.entrada(soc);
 			}
 		});
-		btnTeste.setBounds(103, 197, 89, 23);
+		btnTeste.setBounds(151, 197, 89, 23);
 		contentPane.add(btnTeste);
 
 		JLabel lblNome = new JLabel("Nome:");
@@ -97,19 +105,15 @@ public class JUIEntradaSocios extends JFrame {
 		sexo.setBounds(93, 123, 222, 20);
 		contentPane.add(sexo);
 		sexo.setColumns(10);
-		
+
 		lblCdigoDoScio = new JLabel("C\u00F3digo:");
 		lblCdigoDoScio.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblCdigoDoScio.setBounds(27, 154, 137, 32);
 		contentPane.add(lblCdigoDoScio);
-		
+
 		codigo = new JTextField();
 		codigo.setBounds(93, 162, 222, 20);
 		contentPane.add(codigo);
 		codigo.setColumns(10);
-		
-		JButton btnSair = new JButton("Sair");
-		btnSair.setBounds(212, 197, 89, 23);
-		contentPane.add(btnSair);
 	}
 }

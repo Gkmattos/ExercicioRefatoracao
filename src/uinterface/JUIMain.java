@@ -62,6 +62,12 @@ public class JUIMain extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JButton btnInformaes = new JButton("Informa\u00E7\u00F5es");
+		btnInformaes.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				JUIPublico publico=new JUIPublico();
+						publico.setVisible(true);
+			}
+		});
 		btnInformaes.setBounds(214, 87, 166, 23);
 		contentPane.add(btnInformaes);
 		
