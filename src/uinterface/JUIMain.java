@@ -44,8 +44,8 @@ public class JUIMain extends JFrame {
 		JButton btnEntradaDeClientes = new JButton("Entrada de Clientes");
 		btnEntradaDeClientes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JUIEntradaDeClientes eu=new JUIEntradaDeClientes();
-				eu.setVisible(true);
+				JUIEntradaDeClientes entradaClientes=new JUIEntradaDeClientes();
+				entradaClientes.setVisible(true);
 			}
 		});
 		btnEntradaDeClientes.setBounds(38, 28, 166, 23);
@@ -54,6 +54,8 @@ public class JUIMain extends JFrame {
 		JButton btnNewButton = new JButton("Saída de Clientes");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				JUISaidaCliente saidaCliente=new JUISaidaCliente();
+				saidaCliente.setVisible(true);
 			}
 		});
 		btnNewButton.setBounds(38, 87, 166, 23);
@@ -64,6 +66,12 @@ public class JUIMain extends JFrame {
 		contentPane.add(btnInformaes);
 		
 		JButton btnEntradaDeScios = new JButton("Entrada de S\u00F3cios");
+		btnEntradaDeScios.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JUIEntradaSocios entradaSocios=new JUIEntradaSocios();
+				entradaSocios.setVisible(true);
+			}
+		});
 		btnEntradaDeScios.setBounds(214, 28, 166, 23);
 		contentPane.add(btnEntradaDeScios);
 	}
