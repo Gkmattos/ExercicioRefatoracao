@@ -15,6 +15,9 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.io.Closeable;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -47,8 +50,11 @@ public class JUIEntradaDeClientes extends JFrame {
 
 	/**
 	 * Create the frame.
+	 * 
+	 * @throws IOException
 	 */
 	public JUIEntradaDeClientes() {
+
 		bar = new Bar();
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 373, 248);
@@ -63,6 +69,7 @@ public class JUIEntradaDeClientes extends JFrame {
 				Cliente cl = new Cliente(nome.getText(), cpf.getText(), Integer.parseInt(idade.getText()),
 						sexo.getText());
 				bar.entrada(cl);
+
 			}
 		});
 		btnTeste.setBounds(156, 154, 89, 23);

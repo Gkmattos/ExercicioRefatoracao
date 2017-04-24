@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 
 public class JUIMain extends JFrame {
@@ -40,41 +41,43 @@ public class JUIMain extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		JButton btnEntradaDeClientes = new JButton("Entrada de Clientes");
 		btnEntradaDeClientes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JUIEntradaDeClientes entradaClientes=new JUIEntradaDeClientes();
+
+				JUIEntradaDeClientes entradaClientes = new JUIEntradaDeClientes();
+
 				entradaClientes.setVisible(true);
 			}
 		});
 		btnEntradaDeClientes.setBounds(38, 28, 166, 23);
 		contentPane.add(btnEntradaDeClientes);
-		
+
 		JButton btnNewButton = new JButton("Saída de Clientes");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				JUISaidaCliente saidaCliente=new JUISaidaCliente();
+				JUISaidaCliente saidaCliente = new JUISaidaCliente();
 				saidaCliente.setVisible(true);
 			}
 		});
 		btnNewButton.setBounds(38, 87, 166, 23);
 		contentPane.add(btnNewButton);
-		
+
 		JButton btnInformaes = new JButton("Informa\u00E7\u00F5es");
 		btnInformaes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				JUIPublico publico=new JUIPublico();
-						publico.setVisible(true);
+				JUIPublico publico = new JUIPublico();
+				publico.setVisible(true);
 			}
 		});
 		btnInformaes.setBounds(214, 87, 166, 23);
 		contentPane.add(btnInformaes);
-		
+
 		JButton btnEntradaDeScios = new JButton("Entrada de S\u00F3cios");
 		btnEntradaDeScios.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JUIEntradaSocios entradaSocios=new JUIEntradaSocios();
+				JUIEntradaSocios entradaSocios = new JUIEntradaSocios();
 				entradaSocios.setVisible(true);
 			}
 		});
